@@ -1,8 +1,8 @@
 function [c,ceq] = constraints_IDF(x)
 %function computing constraints of the sellar problem
 global data;
-res_loads = data.res_loads;
 
+res_loads = data.res_loads;
 res_aero = data.res_aero; 
 weight_fuel = data.weight_fuel;
 weight_str_wing = data.weight_str_wing; 
