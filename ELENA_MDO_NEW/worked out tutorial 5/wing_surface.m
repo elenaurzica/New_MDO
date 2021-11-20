@@ -12,7 +12,7 @@ global data;
 %        -0.0288];
 
 
-%x = [4.5 1.04 20.04 4 -7 27 27];
+ %x = [4.5 1.04 20.04 4 -7 27 27];
 
 chord_kink = (x(1)+data.y_kink*tand(1))-(data.y_kink*tand(x(6)));  
 wing_surface = (chord_kink + x(1))*data.y_kink*0.5 + (x(2)+chord_kink)*(x(3)/2-data.y_kink)*0.5;   
