@@ -1,7 +1,7 @@
 function res_aero = aerodynamics(x)
 %% Aerodynamic solver setting
 global data
-% import wing_surface.*
+import wing_surface.*
 import MAC.*
 x = x .* data.x0;  %DENORMALIZING DESIGN VECTOR BC x0 is normalised
 

@@ -1,7 +1,7 @@
 function [f,vararg] = Optim_IDF(x)
       
     global data;
-    
+    %x = x .* data.x0; 
     %vararg = {res_loads, res_aero, weight_fuel, weight_str_wing};
     
     data.res_loads = loads(x);

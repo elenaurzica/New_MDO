@@ -3,8 +3,7 @@ function write_init = write_init(x)
 global data
 
 x = x .* data.x0;
-
-
+import wing_surface.*
 % x = [4.5 1.04 20.04  4  -7  27  27 0.3156    0.2076    0.2577  0.1669    0.2176   0.1868   -0.1133 -0.0853   -0.2094   -0.0577 -0.1707     -0.1192 0.2712    0.2148 0.1857    0.1861  0.1684   0.1727   -0.0957   -0.0388 -0.2101   -0.0114   -0.1612  -0.0911...
 %     0 0 1.7080  1.7316 1.7636  1.7908 1.7985 1.7534 1.6533   1.5145    1.3446  1.1485  0.9300 0.6935  0.4455  0.2005 ...
 %     -0.1795 -0.1396 -0.1089  -0.0845  -0.0639  -0.0459 -0.0349 -0.0286 -0.0240 -0.0210 -0.0186 -0.0175 -0.0176 -0.0191 1015.3 2865];
@@ -22,7 +21,7 @@ z_LE_tip = 0.5 * x(3) * tand(data.dihedral);
 
 namefile    =    char('our_airfoil');
 MTOW        =    (x(62) + x(63) + data.weight_AW);     %20820;         %[kg]
-MZF         =     17100;                %momentan e ct. data.weight_A-W +x(62);  % a-w minus w_str_wing         %[kg]
+MZF         =     MTOW - x(63); %17100;                %momentan e ct. data.weight_A-W +x(62);  % a-w minus w_str_wing         %[kg]
 nz_max      =    2.5;   
 span        =    x(3);            %[m]
 root_chord =    x(1);    %x()*x_Ref       %[m]
